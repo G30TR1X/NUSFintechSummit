@@ -1,3 +1,3 @@
-# GameBuilderChallenge
+# NUSFintechSummit
 
-Development for Game Builder Challenge Hackathon
+This current repo is to track our progress of the NUS Fintech Summit Hackathon 2025
