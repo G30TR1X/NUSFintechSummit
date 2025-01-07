@@ -1,0 +1,221 @@
+[gd_scene load_steps=21 format=3 uid="uid://c27s8qqggf4dw"]
+
+[ext_resource type="Script" path="res://Scripts/coin.gd" id="1_ce6uk"]
+[ext_resource type="Texture2D" uid="uid://cawvy41ljsat" path="res://brackeys_platformer_assets/sprites/coin.png" id="1_ochff"]
+[ext_resource type="AudioStream" uid="uid://cpkmbof4gdhi1" path="res://brackeys_platformer_assets/sounds/coin.wav" id="3_cum8t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bwxd8"]
+atlas = ExtResource("1_ochff")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tvrq6"]
+atlas = ExtResource("1_ochff")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nmdjh"]
+atlas = ExtResource("1_ochff")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_08oft"]
+atlas = ExtResource("1_ochff")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8601d"]
+atlas = ExtResource("1_ochff")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xetlh"]
+atlas = ExtResource("1_ochff")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18tvn"]
+atlas = ExtResource("1_ochff")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c54fh"]
+atlas = ExtResource("1_ochff")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_28glf"]
+atlas = ExtResource("1_ochff")
+region = Rect2(128, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qtm33"]
+atlas = ExtResource("1_ochff")
+region = Rect2(144, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3tio4"]
+atlas = ExtResource("1_ochff")
+region = Rect2(160, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uf3m8"]
+atlas = ExtResource("1_ochff")
+region = Rect2(176, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rbouo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bwxd8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tvrq6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nmdjh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_08oft")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8601d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xetlh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_18tvn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c54fh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_28glf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qtm33")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3tio4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uf3m8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8ugin"]
+radius = 5.0
+
+[sub_resource type="Animation" id="Animation_5cq45"]
+resource_name = "sfx"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.966667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_1fxqr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gig1n"]
+_data = {
+"RESET": SubResource("Animation_1fxqr"),
+"sfx": SubResource("Animation_5cq45")
+}
+
+[node name="Coin" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_ce6uk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_rbouo")
+autoplay = "default"
+frame_progress = 0.875351
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8ugin")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_cum8t")
+bus = &"SFX"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_gig1n")
+}
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

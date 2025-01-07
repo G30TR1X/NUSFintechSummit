@@ -1,3 +1,3 @@
 # NUSFintechSummit
 
-This current repo is to track our progress of the NUS Fintech Summit Hackathon 2025
+https://docs.google.com/document/d/1EOoD2Waz0hUYLKE-4COEFuatWP19ECFTcI_mWjwxFm4/edit?usp=sharing

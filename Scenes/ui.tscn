@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://0s43msjwhwbv"]
+
+[ext_resource type="Texture2D" uid="uid://cawvy41ljsat" path="res://brackeys_platformer_assets/sprites/coin.png" id="1_gq5cm"]
+[ext_resource type="FontFile" uid="uid://cc882q2vds508" path="res://brackeys_platformer_assets/fonts/PixelOperator8.ttf" id="2_4r5ax"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(55, 52)
+scale = Vector2(6.17552, 6.17552)
+texture = ExtResource("1_gq5cm")
+region_enabled = true
+region_rect = Rect2(3, 3, 10, 10)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 98.0
+offset_top = 27.0
+offset_right = 150.0
+offset_bottom = 83.0
+theme_override_fonts/font = ExtResource("2_4r5ax")
+theme_override_font_sizes/font_size = 56
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
