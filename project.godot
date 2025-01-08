@@ -15,6 +15,10 @@ run/main_scene="res://Scene/GameWorld.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/simple_card_pile_ui/plugin.cfg")
+
 [input]
 
 moveLeft={

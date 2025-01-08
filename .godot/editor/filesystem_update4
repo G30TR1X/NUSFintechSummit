@@ -1,3 +1,6 @@
 res://Scene/GameWorld.tscn
 res://Character/player_preview.tscn
 res://example_2/example.tscn
+res://Scene/action_phase_ui.tscn
+res://example/example.tscn
+res://Scripts/player_preview.gd
