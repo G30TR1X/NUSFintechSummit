@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://cw11khwxngnrw"]
+[gd_scene load_steps=3 format=3 uid="uid://cw11khwxngnrw"]
 
+[ext_resource type="Script" path="res://Scene/action_phase_ui.gd" id="1_0hc3h"]
 [ext_resource type="Script" path="res://addons/simple_card_pile_ui/card_pile_ui.gd" id="1_5wxxw"]
 
 [node name="ActionPhaseUI" type="CanvasLayer"]
+script = ExtResource("1_0hc3h")
 
 [node name="CardPileUI" type="Control" parent="."]
 layout_mode = 3
@@ -10,3 +12,11 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_5wxxw")
+
+[node name="EndTurnButton" type="Button" parent="."]
+offset_left = 927.0
+offset_top = 204.0
+offset_right = 1135.0
+offset_bottom = 276.0
+theme_override_font_sizes/font_size = 46
+text = "End Turn"

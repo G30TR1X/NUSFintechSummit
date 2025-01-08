@@ -225,12 +225,12 @@ tileset_32x32(new).png::CompressedTexture2D::5866018034713992737::1736333617::17
 tileset_64x64(new).png::CompressedTexture2D::7634245129415821826::1736333617::1736337987::1::::<><>::
 waterfall_anim_strip_4.png::CompressedTexture2D::6751759396399176279::1736333617::1736337987::1::::<><>::
 waterfall_bottom_anim_strip_4.png::CompressedTexture2D::5958727910113893757::1736333617::1736337987::1::::<><>::
-::res://Character/::1736342712
+::res://Character/::1736355854
 object.tscn::PackedScene::1667917351808678910::1736337592::0::1::::<><>::uid://e7i0f27ioevl::::res://Assets/Blue_witch/B_witch_idle.png<>res://Scripts/player.gd<>uid://cdejcoqids5u3::::res://Assets/Blue_witch/B_witch_run.png
-player_preview.tscn::PackedScene::185558875993647480::1736342712::0::1::::<><>::res://Scripts/player_preview.gd<>uid://e7i0f27ioevl::::res://Assets/Blue_witch/B_witch_idle.png<>uid://cdejcoqids5u3::::res://Assets/Blue_witch/B_witch_run.png
-::res://example/::1736338833
+player_preview.tscn::PackedScene::185558875993647480::1736355948::0::1::::<><>::res://Scripts/player_preview.gd<>uid://e7i0f27ioevl::::res://Assets/Blue_witch/B_witch_idle.png<>uid://cdejcoqids5u3::::res://Assets/Blue_witch/B_witch_run.png
+::res://example/::1736353688
 example.gd::GDScript::-1::1736338474::0::1::::<>Node2D<>::
-example.tscn::PackedScene::2437360172357688545::1736338833::0::1::::<><>::res://example/example.gd<>res://addons/simple_card_pile_ui/card_pile_ui_debugger.gd<>res://example/example__dropzone__discard.gd<>res://addons/simple_card_pile_ui/card_pile_ui.gd<>res://example/example__dropzone__play_by_suit.gd<>uid://bpjxsk1mxfl77::::res://assets/1x1_#ffffffff.png<>uid://bs2vgjwuarxm5::::res://example/example__card_ui.tscn
+example.tscn::PackedScene::2437360172357688545::1736353688::0::1::::<><>::res://example/example.gd<>res://addons/simple_card_pile_ui/card_pile_ui_debugger.gd<>res://example/example__dropzone__discard.gd<>res://addons/simple_card_pile_ui/card_pile_ui.gd<>res://example/example__dropzone__play_by_suit.gd<>uid://bpjxsk1mxfl77::::res://assets/1x1_#ffffffff.png<>uid://bs2vgjwuarxm5::::res://example/example__card_ui.tscn
 example__card_collection.json::JSON::-1::1736338474::0::1::::<><>::
 example__card_data.gd::GDScript::-1::1736338474::0::1::::<>CardUIData<>::
 example__card_database.json::JSON::-1::1736338474::0::1::::<><>::
@@ -238,9 +238,9 @@ example__card_ui.gd::GDScript::-1::1736338474::0::1::::<>CardUI<>::
 example__card_ui.tscn::PackedScene::3706844347754075162::1736338833::0::1::::<><>::res://example/example__card_ui.gd<>uid://ben7qqx34vpkq::::res://assets/card_back.png<>uid://dp7k4aq6freb1::::res://assets/card_clubs_02.png
 example__dropzone__discard.gd::GDScript::-1::1736338474::0::1::::<>CardDropzone<>::
 example__dropzone__play_by_suit.gd::GDScript::-1::1736338474::0::1::::<>CardDropzone<>::
-::res://example_2/::1736342712
+::res://example_2/::1736353688
 example.gd::GDScript::-1::1736338474::0::1::::<>Node2D<>::
-example.tscn::PackedScene::3777197191066739242::1736342712::0::1::::<><>::res://example_2/example.gd<>uid://bddymiv4rv8kw::::res://assets/white-circle.png<>res://example_2/example__dropzone__enemy.gd<>uid://b0ymf1fwfgbss::::res://assets/enemy_crab.png<>uid://3sjbqh1m34dc::::res://assets/enemy_bee.png<>res://example_2/example__dropzone__upgrade.gd<>res://example_2/example__dropzone__non-attack.gd<>uid://bpjxsk1mxfl77::::res://assets/1x1_#ffffffff.png<>res://addons/simple_card_pile_ui/card_pile_ui.gd<>uid://dn2ej8wtxey2u::::res://example_2/example__card_ui.tscn
+example.tscn::PackedScene::3777197191066739242::1736353688::0::1::::<><>::res://example_2/example.gd<>uid://bddymiv4rv8kw::::res://assets/white-circle.png<>res://example_2/example__dropzone__enemy.gd<>uid://b0ymf1fwfgbss::::res://assets/enemy_crab.png<>uid://3sjbqh1m34dc::::res://assets/enemy_bee.png<>res://example_2/example__dropzone__upgrade.gd<>res://example_2/example__dropzone__non-attack.gd<>uid://bpjxsk1mxfl77::::res://assets/1x1_#ffffffff.png<>res://addons/simple_card_pile_ui/card_pile_ui.gd<>uid://dn2ej8wtxey2u::::res://example_2/example__card_ui.tscn
 example__card_collection.json::JSON::-1::1736338474::0::1::::<><>::
 example__card_data.gd::GDScript::-1::1736338474::0::1::::ExampleCardUIData<>CardUIData<>::
 example__card_database.json::JSON::-1::1736338474::0::1::::<><>::
@@ -253,9 +253,9 @@ example__card_ui.tscn::PackedScene::8127715925999994618::1736338833::0::1::::<><
 example__dropzone__enemy.gd::GDScript::-1::1736338474::0::1::::<>CardDropzone<>::
 example__dropzone__non-attack.gd::GDScript::-1::1736338474::0::1::::<>CardDropzone<>::
 example__dropzone__upgrade.gd::GDScript::-1::1736338474::0::1::::<>CardDropzone<>::
-::res://Scene/::1736344481
-action_phase_ui.tscn::PackedScene::6372266651491232492::1736344481::0::1::::<><>::res://addons/simple_card_pile_ui/card_pile_ui.gd
-GameWorld.tscn::PackedScene::2515409403950252407::1736342797::0::1::::<><>::uid://d2nh2n5q0erp5::::res://Assets/platformer_metroidvania asset pack v1.01/tiles and background_foreground (new)/tileset.png<>uid://cw11khwxngnrw::::res://Scene/action_phase_ui.tscn<>uid://cv5elqj50afg::::res://Character/player_preview.tscn
-::res://Scripts/::1736342712
-player.gd::GDScript::-1::1736335105::0::1::::<>RigidBody2D<>::
-player_preview.gd::GDScript::-1::1736342712::0::1::::<>CharacterBody2D<>::
+::res://Scene/::1736355870
+action_phase_ui.tscn::PackedScene::6372266651491232492::1736355853::0::1::::<><>::res://Scene/action_phase_ui.gd<>res://addons/simple_card_pile_ui/card_pile_ui.gd
+GameWorld.tscn::PackedScene::2515409403950252407::1736355851::0::1::::<><>::uid://d2nh2n5q0erp5::::res://Assets/platformer_metroidvania asset pack v1.01/tiles and background_foreground (new)/tileset.png<>uid://cv5elqj50afg::::res://Character/player_preview.tscn
+action_phase_ui.gd::GDScript::-1::1736355948::0::1::::<>CanvasLayer<>::
+::res://Scripts/::1736355851
+player_preview.gd::GDScript::-1::1736355851::0::1::::<>CharacterBody2D<>::
