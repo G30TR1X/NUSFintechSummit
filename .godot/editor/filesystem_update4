@@ -1,9 +1,0 @@
-res://Scripts/player.gd
-res://Scene/action_phase_ui.gd
-res://Scene/GameWorld.tscn
-res://example_2/example.tscn
-res://Scene/action_phase_ui.tscn
-res://example/example.tscn
-res://Character/player_preview.tscn
-res://example/example__card_ui.gd
-res://example/example__card_ui.tscn
