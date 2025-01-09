@@ -90,5 +90,7 @@ position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 
 [node name="ActionPhaseUI" parent="." instance=ExtResource("3_05hon")]
+process_mode = 2
 
 [connection signal="action_done" from="Player" to="ActionPhaseUI" method="_on_player_action_done"]
+[connection signal="manual_move_init" from="ActionPhaseUI" to="Player" method="_on_action_phase_ui_manual_move_init"]

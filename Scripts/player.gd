@@ -8,9 +8,7 @@ const SPEED = 200.0
 const JUMP_VELOCITY = -400.0
 
 @export var manual_move_state = false
-
-var exit_state = 0
-# 0 = do nothing (end turn)
+# always return to "false" the default value after every action
 
 var current_loop = Callable()
 
@@ -40,9 +38,8 @@ func manual_move() -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
-func manual_move_callback() -> void:
-	manual_move_state = true
-	current_loop = Callable()
+func _ready() -> void:
+	_on_action_phase_ui_manual_move_init()
 
 func _process(delta: float) -> void:
 	pass
@@ -60,9 +57,13 @@ func _physics_process(delta: float) -> void:
 	
 	move_and_slide()
 
-func _on_cooldown_timeout() -> void:
-	match exit_state:
-		0:
-			action_done.emit()
-		_:
-			action_done.emit()
+func manual_move_exit_state():
+	manual_move_state = false
+	action_done.emit()
+	cooldown_timer.disconnect("timeout", manual_move_exit_state)
+
+func _on_action_phase_ui_manual_move_init() -> void:
+	current_loop = Callable()
+	manual_move_state = true
+	cooldown_timer.start(5)
+	cooldown_timer.connect("timeout", manual_move_exit_state)
