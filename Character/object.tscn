@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://x07mcq16syoc"]
+[gd_scene load_steps=20 format=3 uid="uid://c08eyxlwtsf1n"]
 
 [ext_resource type="Texture2D" uid="uid://e7i0f27ioevl" path="res://Assets/Blue_witch/B_witch_idle.png" id="1_r2vsm"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_u8m7s"]

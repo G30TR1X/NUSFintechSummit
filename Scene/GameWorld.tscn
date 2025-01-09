@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://bb3qop0a2b1ih"]
+[gd_scene load_steps=8 format=4 uid="uid://bb3qop0a2b1ih"]
 
 [ext_resource type="Texture2D" uid="uid://d2nh2n5q0erp5" path="res://Assets/platformer_metroidvania asset pack v1.01/tiles and background_foreground (new)/tileset.png" id="2_2slxk"]
-[ext_resource type="PackedScene" uid="uid://cw11khwxngnrw" path="res://Scene/action_phase_ui.tscn" id="3_05hon"]
-[ext_resource type="PackedScene" uid="uid://cv5elqj50afg" path="res://Character/player_preview.tscn" id="3_la7ic"]
+[ext_resource type="PackedScene" uid="uid://cw11khwxngnrw" path="res://Scene/card_phase_ui.tscn" id="3_05hon"]
+[ext_resource type="PackedScene" uid="uid://cv5elqj50afg" path="res://Character/player.tscn" id="3_la7ic"]
+[ext_resource type="PackedScene" uid="uid://bgf70n51mn1gr" path="res://Scene/action_phase_ui.tscn" id="4_2rlll"]
+[ext_resource type="PackedScene" uid="uid://byaide2o054jw" path="res://Scene/spike.tscn" id="5_iks5g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pelcx"]
 texture = ExtResource("2_2slxk")
@@ -89,8 +91,14 @@ zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 
-[node name="ActionPhaseUI" parent="." instance=ExtResource("3_05hon")]
+[node name="CardPhaseUI" parent="." instance=ExtResource("3_05hon")]
 process_mode = 2
 
-[connection signal="action_done" from="Player" to="ActionPhaseUI" method="_on_player_action_done"]
-[connection signal="manual_move_init" from="ActionPhaseUI" to="Player" method="_on_action_phase_ui_manual_move_init"]
+[node name="ActionPhaseUI" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_2rlll")]
+player = NodePath("../Player")
+
+[node name="Spike" parent="." instance=ExtResource("5_iks5g")]
+position = Vector2(120, -40)
+
+[connection signal="action_done" from="Player" to="CardPhaseUI" method="_on_player_action_done"]
+[connection signal="manual_move_init" from="CardPhaseUI" to="Player" method="_on_action_phase_ui_manual_move_init"]

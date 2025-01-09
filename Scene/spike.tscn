@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://byaide2o054jw"]
+
+[ext_resource type="Texture2D" uid="uid://bktixvon5noe6" path="res://Assets/platformer_metroidvania asset pack v1.01/miscellaneous sprites/spikes_trap.png" id="1_ofv8n"]
+[ext_resource type="PackedScene" path="res://Scene/hitbox.tscn" id="2_fybiq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3rjsb"]
+size = Vector2(14, 16)
+
+[node name="Spike" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ofv8n")
+
+[node name="Hitbox" parent="." instance=ExtResource("2_fybiq")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("RectangleShape2D_3rjsb")

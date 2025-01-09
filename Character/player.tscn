@@ -1,8 +1,10 @@
-[gd_scene load_steps=20 format=3 uid="uid://cv5elqj50afg"]
+[gd_scene load_steps=22 format=3 uid="uid://cv5elqj50afg"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_pk3sj"]
 [ext_resource type="Texture2D" uid="uid://e7i0f27ioevl" path="res://Assets/Blue_witch/B_witch_idle.png" id="2_xjdus"]
 [ext_resource type="Texture2D" uid="uid://cdejcoqids5u3" path="res://Assets/Blue_witch/B_witch_run.png" id="3_b5han"]
+[ext_resource type="PackedScene" uid="uid://cf57lm7kwjl3k" path="res://Scene/health_handler.tscn" id="4_wuol8"]
+[ext_resource type="Script" path="res://Scene/health_handler.gd" id="5_stn1g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4da1e"]
 size = Vector2(3.08594, 5.625)
@@ -119,6 +121,7 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 3
 script = ExtResource("1_pk3sj")
 manual_move_state = true
 
@@ -133,5 +136,9 @@ animation = &"idle"
 autoplay = "idle"
 
 [node name="Cooldown" type="Timer" parent="."]
+
+[node name="HealthHandler" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_wuol8")]
+script = ExtResource("5_stn1g")
+player = NodePath("..")
 
 [connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]

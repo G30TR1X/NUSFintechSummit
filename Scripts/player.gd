@@ -1,7 +1,11 @@
+class_name Player
+
 extends CharacterBody2D
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var cooldown_timer: Timer = $Cooldown
+@onready var health_handler: Node2D = $HealthHandler
+
 signal action_done
 
 const SPEED = 200.0
