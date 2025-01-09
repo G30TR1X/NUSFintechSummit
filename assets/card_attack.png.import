@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://g3plv60jpgat"
-path="res://.godot/imported/card_attack.png-cb0f49138611862f8939755a480ba1f8.ctex"
+path="res://.godot/imported/card_attack.png-086d8467c75ef8e7e38319568c905bec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/card_attack.png"
-dest_files=["res://.godot/imported/card_attack.png-cb0f49138611862f8939755a480ba1f8.ctex"]
+source_file="res://Assets/card_attack.png"
+dest_files=["res://.godot/imported/card_attack.png-086d8467c75ef8e7e38319568c905bec.ctex"]
 
 [params]
 

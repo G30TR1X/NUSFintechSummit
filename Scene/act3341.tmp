@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://cw11khwxngnrw"]
+
+[ext_resource type="Script" path="res://addons/simple_card_pile_ui/card_pile_ui.gd" id="1_5wxxw"]
+[ext_resource type="Texture2D" uid="uid://dstwvngwunvcc" path="res://Assets/ProgressBarAsset/healthbarUnder.png" id="2_wngvv"]
+[ext_resource type="Texture2D" uid="uid://1bsgo4sslp8r" path="res://Assets/ProgressBarAsset/healthbarProgress.png" id="3_c17fj"]
+[ext_resource type="Script" path="res://Scripts/health_bar.gd" id="4_vbrai"]
+
+[node name="ActionPhaseUI" type="CanvasLayer"]
+
+[node name="CardPileUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_5wxxw")
+
+[node name="HealthBar" type="TextureProgressBar" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -74.0
+offset_top = 12.0
+offset_right = -10.0
+offset_bottom = 22.0
+grow_horizontal = 0
+texture_under = ExtResource("2_wngvv")
+texture_progress = ExtResource("3_c17fj")
+script = ExtResource("4_vbrai")

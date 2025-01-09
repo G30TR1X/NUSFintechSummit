@@ -4,3 +4,8 @@ res://example_2/example.tscn
 res://Scene/action_phase_ui.tscn
 res://example/example.tscn
 res://Scripts/player_preview.gd
+res://Scripts/health_bar.gd
+res://Scripts/game_manager.gd
+res://Scripts/hitbox.gd
+res://Scene/hitbox.tscn
+res://Scene/spike.tscn

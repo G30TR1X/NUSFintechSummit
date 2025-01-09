@@ -1,8 +1,13 @@
-[gd_scene load_steps=6 format=4 uid="uid://bb3qop0a2b1ih"]
+[gd_scene load_steps=11 format=4 uid="uid://bb3qop0a2b1ih"]
 
+[ext_resource type="Script" path="res://Scripts/game_manager.gd" id="1_12bp6"]
 [ext_resource type="Texture2D" uid="uid://d2nh2n5q0erp5" path="res://Assets/platformer_metroidvania asset pack v1.01/tiles and background_foreground (new)/tileset.png" id="2_2slxk"]
 [ext_resource type="PackedScene" uid="uid://cw11khwxngnrw" path="res://Scene/action_phase_ui.tscn" id="3_05hon"]
 [ext_resource type="PackedScene" uid="uid://cv5elqj50afg" path="res://Character/player_preview.tscn" id="3_la7ic"]
+[ext_resource type="PackedScene" uid="uid://bu7oab0uxicml" path="res://Scene/spike.tscn" id="5_of8dx"]
+[ext_resource type="Texture2D" uid="uid://dstwvngwunvcc" path="res://Assets/ProgressBarAsset/healthbarUnder.png" id="5_ubmto"]
+[ext_resource type="Texture2D" uid="uid://1bsgo4sslp8r" path="res://Assets/ProgressBarAsset/healthbarProgress.png" id="6_gbja1"]
+[ext_resource type="Script" path="res://Scripts/health_bar.gd" id="7_caala"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pelcx"]
 texture = ExtResource("2_2slxk")
@@ -72,11 +77,15 @@ sources/0 = SubResource("TileSetAtlasSource_pelcx")
 
 [node name="Node2D" type="Node2D"]
 
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("1_12bp6")
+
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AADh/wAAAAABAAAAAADi/wAAAAABAAAAAADj/wAAAAABAAAAAADk/wAAAAABAAAAAADl/wAAAAABAAAAAADm/wAAAAABAAAAAADn/wAAAAABAAAAAADo/wAAAAABAAAAAADp/wAAAAABAAAAAADq/wAAAAABAAAAAADr/wAAAAABAAAAAADs/wAAAAABAAAAAADt/wAAAAABAAAAAADu/wAAAAABAAAAAADv/wAAAAABAAAAAADw/wAAAAABAAAAAADx/wAAAAABAAAAAADy/wAAAAABAAAAAADz/wAAAAABAAAAAAD0/wAAAAABAAAAAAD1/wAAAAABAAAAAAD2/wAAAAABAAAAAAD3/wAAAAABAAAAAAD4/wAAAAABAAAAAAD5/wAAAAABAAAAAAD6/wAAAAABAAAAAAD7/wAAAAABAAAAAAD8/wAAAAABAAAAAAD9/wAAAAABAAAAAAD+/wAAAAABAAAAAAD//wAAAAABAAAAAAAAAAAAAAABAAAAAAABAAAAAAABAAAAAAACAAAAAAABAAAAAAADAAAAAAABAAAAAAAEAAAAAAABAAAAAAAFAAAAAAABAAAAAAAGAAAAAAABAAAAAAAHAAAAAAABAAAAAAAIAAAAAAABAAAAAAAJAAAAAAABAAAAAAAKAAAAAAABAAAAAAALAAAAAAABAAAAAAAMAAAAAAABAAAAAAANAAAAAAABAAAAAAAOAAAAAAABAAAAAAAPAAAAAAABAAAAAAAQAAAAAAABAAAAAAARAAAAAAABAAAAAAASAAAAAAABAAAAAAATAAAAAAABAAAAAAAUAAAAAAABAAAAAAAVAAAAAAABAAAAAAAWAAAAAAABAAAAAAAXAAAAAAABAAAAAAAYAAAAAAABAAAAAAAZAAAAAAABAAAAAAAaAAAAAAABAAAAAAAbAAAAAAABAAAAAAAcAAAAAAABAAAAAAAdAAAAAAABAAAAAAAeAAAAAAABAAAAAAAfAAAAAAABAAAAAADh/wEAAAABAAEAAADi/wEAAAABAAEAAADj/wEAAAABAAEAAADk/wEAAAABAAEAAADl/wEAAAABAAEAAADm/wEAAAABAAEAAADn/wEAAAABAAEAAADo/wEAAAABAAEAAADp/wEAAAABAAEAAADq/wEAAAABAAEAAADr/wEAAAABAAEAAADs/wEAAAABAAEAAADt/wEAAAABAAEAAADu/wEAAAABAAEAAADv/wEAAAABAAEAAADw/wEAAAABAAEAAADx/wEAAAABAAEAAADy/wEAAAABAAEAAADz/wEAAAABAAEAAAD0/wEAAAABAAEAAAD1/wEAAAABAAEAAAD2/wEAAAABAAEAAAD3/wEAAAABAAEAAAD4/wEAAAABAAEAAAD5/wEAAAABAAEAAAD6/wEAAAABAAEAAAD7/wEAAAABAAEAAAD8/wEAAAABAAEAAAD9/wEAAAABAAEAAAD+/wEAAAABAAEAAAD//wEAAAABAAEAAAAAAAEAAAABAAEAAAABAAEAAAABAAEAAAACAAEAAAABAAEAAAADAAEAAAABAAEAAAAEAAEAAAABAAEAAAAFAAEAAAABAAEAAAAGAAEAAAABAAEAAAAHAAEAAAABAAEAAAAIAAEAAAABAAEAAAAJAAEAAAABAAEAAAAKAAEAAAABAAEAAAALAAEAAAABAAEAAAAMAAEAAAABAAEAAAANAAEAAAABAAEAAAAOAAEAAAABAAEAAAAPAAEAAAABAAEAAAAQAAEAAAABAAEAAAARAAEAAAABAAEAAAASAAEAAAABAAEAAAATAAEAAAABAAEAAAAUAAEAAAABAAEAAAAVAAEAAAABAAEAAAAWAAEAAAABAAEAAAAXAAEAAAABAAEAAAAYAAEAAAABAAEAAAAZAAEAAAABAAEAAAAaAAEAAAABAAEAAAAbAAEAAAABAAEAAAAcAAEAAAABAAEAAAAdAAEAAAABAAEAAAAeAAEAAAABAAEAAAAfAAEAAAABAAEAAAA=")
 tile_set = SubResource("TileSet_m5wol")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_la7ic")]
+z_index = 5
 position = Vector2(-1, -58)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="CharacterBody2D"]
@@ -88,3 +97,24 @@ zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 
 [node name="ActionPhaseUI" parent="." instance=ExtResource("3_05hon")]
+
+[node name="HealthBar" type="TextureProgressBar" parent="ActionPhaseUI" node_paths=PackedStringArray("player")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -322.0
+offset_top = 28.0
+offset_right = -26.0
+offset_bottom = 84.0
+grow_horizontal = 0
+nine_patch_stretch = true
+texture_under = ExtResource("5_ubmto")
+texture_progress = ExtResource("6_gbja1")
+script = ExtResource("7_caala")
+player = NodePath("../../CharacterBody2D")
+
+[node name="SpikeObstacles" type="Node" parent="."]
+
+[node name="Spike" parent="SpikeObstacles" instance=ExtResource("5_of8dx")]
+position = Vector2(90, -8)
+rotation = 3.14159
