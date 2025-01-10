@@ -1,6 +1,6 @@
 extends TextureProgressBar
 
-@onready var action_phase_ui: CanvasLayer = $".."
+@export var action_phase_ui: CanvasLayer
 @onready var player = action_phase_ui.player
 @onready var health = player.health_handler
 

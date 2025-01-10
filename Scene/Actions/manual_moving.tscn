@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bedy85hyq0bm2"]
+
+[ext_resource type="Script" path="res://Scripts/Actions/manual_moving.gd" id="1_2v0kf"]
+
+[node name="ManualMoving" type="Node"]
+script = ExtResource("1_2v0kf")

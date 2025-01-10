@@ -1,14 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://bgf70n51mn1gr"]
 
-[ext_resource type="Script" path="res://Scene/action_phase_ui.gd" id="1_0hc3h"]
+[ext_resource type="Script" path="res://Scripts/action_phase_ui.gd" id="1_0hc3h"]
 [ext_resource type="PackedScene" uid="uid://clbjcafbdpey2" path="res://Scene/health_bar.tscn" id="1_ka7ig"]
 
 [node name="ActionPhaseUI" type="CanvasLayer"]
 script = ExtResource("1_0hc3h")
 
-[node name="HealthBar" parent="." instance=ExtResource("1_ka7ig")]
+[node name="HealthBar" parent="." node_paths=PackedStringArray("action_phase_ui") instance=ExtResource("1_ka7ig")]
 offset_left = 667.0
 offset_top = 14.0
 offset_right = 731.0
 offset_bottom = 24.0
 scale = Vector2(7.435, 7.435)
+action_phase_ui = NodePath("..")

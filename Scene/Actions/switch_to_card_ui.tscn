@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dm2joeye20dy1"]
+
+[ext_resource type="Script" path="res://Scripts/Actions/switch_to_card_ui.gd" id="1_njxuo"]
+
+[node name="SwitchToCardUI" type="Node"]
+script = ExtResource("1_njxuo")
